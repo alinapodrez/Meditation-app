@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+video {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time,
+.sounds,
+.player {
+    height: 85%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time-display {
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    font-size: 50px;
+}
+
+.time button,
+.sounds button {
+    width: 30%;
+    color: white;
+    height: 10%;
+    background: rgba(255, 255, 255, 0.219);
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.sounds button {
+    border: none;
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+
+}
+
+.sounds button img {
+    height: 70px;
+    width: 70px;
+}
+
+.sounds button:hover {
+    transform: scale(125%);
+    background: rgba(255, 255, 255, 0.500);
+}
+
+.time button:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.500);
+    transform: scale(110%);
+}
+
+.time button:active,
+.sounds button:active {
+    background: rgba(247, 231, 146, 0.219);
+}
+
+.player {
+    position: relative;
+}
+
+.player svg {
+    position: absolute;
+    height: 50%;
+}
+
+.play {
+    z-index: 3;
+}
+
+.moving-outline {
+    transform: rotate(270deg);
+}
